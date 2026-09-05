@@ -11,3 +11,5 @@ tmp_*
 *.zip
 database/users.json
 database/users.json.bak
+database/config.json
+database/owners.json
