@@ -9,3 +9,5 @@ tmp_*
 *.jpg
 *.png
 *.zip
+database/users.json
+database/users.json.bak
