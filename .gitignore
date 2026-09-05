@@ -1,0 +1,11 @@
+node_modules/
+auth_info/
+deploy.bat
+.vscode
+.env
+.npm/
+tmp_*
+*.webp
+*.jpg
+*.png
+*.zip

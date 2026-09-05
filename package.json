@@ -1,0 +1,23 @@
+{
+  "name": "bot-wa-hutao",
+  "version": "1.0.0",
+  "description": "WhatsApp Bot Hu Tao",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@google/generative-ai": "^0.21.0",
+    "@whiskeysockets/baileys": "^6.7.13",
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "fluent-ffmpeg": "^2.1.3",
+    "pino": "^9.6.0",
+    "qrcode": "^1.5.4",
+    "tesseract.js": "^5.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
