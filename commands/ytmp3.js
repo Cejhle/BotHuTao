@@ -1,4 +1,4 @@
-const axios = require('axios');
+//const axios = require('axios');
 
 module.exports = {
     name: 'ytmp3',
@@ -22,15 +22,7 @@ module.exports = {
         await reply('⏳ Sedang memproses audio YouTube...');
 
         try {
-            const aio = await axios.post('https://api.cobalt.tools/', {
-                url: finalUrl,
-                downloadMode: 'audio'
-            }, {
-                headers: { 
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            });
+            const aio = await axios.post('https://api.nexray.eu.cc/downloader/v1/ytmp3?url=' + encodeURIComponent(finalUrl));
 
             if (aio.data?.url) {
                 return await sock.sendMessage(remoteJid, { 
