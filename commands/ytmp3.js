@@ -24,9 +24,9 @@ module.exports = {
         try {
             const aio = await axios.post('https://api.nexray.eu.cc/downloader/v1/ytmp3?url=' + encodeURIComponent(finalUrl));
 
-            if (aio.data?.url) {
+            if (aio.data?.result?.url) {
                 return await sock.sendMessage(remoteJid, { 
-                    audio: { url: aio.data.url }, 
+                    audio: { url: aio.data.result.url }, 
                     mimetype: 'audio/mp4' 
                 }, { quoted: m });
             }
