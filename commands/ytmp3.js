@@ -22,7 +22,7 @@ module.exports = {
         await reply('⏳ Sedang memproses audio YouTube...');
 
         try {
-            const aio = await axios.post('https://api.nexray.eu.cc/downloader/v1/ytmp3?url=' + encodeURIComponent(finalUrl));
+            const aio = await axios.get('https://api.nexray.eu.cc/downloader/v1/ytmp3?url=' + encodeURIComponent(finalUrl));
 
             if (aio.data?.result?.url) {
                 return await sock.sendMessage(remoteJid, { 
