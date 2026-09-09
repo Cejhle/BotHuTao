@@ -22,19 +22,11 @@ module.exports = {
         await reply('⏳ Sedang memproses audio YouTube...');
 
         try {
-            const aio = await axios.post('https://api.cobalt.tools/', {
-                url: finalUrl,
-                downloadMode: 'audio'
-            }, {
-                headers: { 
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            });
+            const aio = await axios.get('https://api.nexray.eu.cc/downloader/v1/ytmp3?url=' + encodeURIComponent(finalUrl));
 
-            if (aio.data?.url) {
+            if (aio.data?.result?.url) {
                 return await sock.sendMessage(remoteJid, { 
-                    audio: { url: aio.data.url }, 
+                    audio: { url: aio.data.result.url }, 
                     mimetype: 'audio/mp4' 
                 }, { quoted: m });
             }
