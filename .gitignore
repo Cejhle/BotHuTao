@@ -6,3 +6,5 @@ tmp_*
 *.webp
 *.jpg
 *.png
+.vscode/
+database/
